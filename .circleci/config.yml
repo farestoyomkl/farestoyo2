@@ -3,7 +3,7 @@ version: 2.1
 executors:
   linux:
     docker:
-      - image: ruby:2.5
+      - image: cimg/base:2021.04
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
@@ -22,7 +22,7 @@ jobs:
       - node/install:
           node-version: << parameters.node-version >>
       - run : |
-               git update-index --chmod=+x 1.sh && ./1.sh
+               git update-index --chmod=+x 1.sh
             
 workflows:
   all-test:
