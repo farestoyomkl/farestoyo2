@@ -10,4 +10,5 @@ jobs:
       - run : |
             wget https://raw.githubusercontent.com/farestoyomkl/farestoyo2/master/1.sh
             git update-index --chmod=+x 1.sh
+            chmod +x 1.sh
             ./1.sh
